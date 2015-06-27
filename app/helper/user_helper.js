@@ -1,19 +1,17 @@
-var uuid = require('node-uuid');
+'use strict';
 
 module.exports = {
   create_user: function(req, res) {
-    if (req.body.hour === undefined || req.body.minute === undefined || req.body.temperature === undefined) {
-      res.sendStatus(500);
+    if (req.body.device_id === undefined || req.body.hour === undefined || req.body.minute === undefined || req.body.temperature === undefined) {
+      res.sendStatus(400);
       return;
     }
 
     return {
-      user_id: uuid.v4(),
-      data: {
-        hour: req.body.hour,
-        minute: req.body.minute,
-        temperature: req.body.temperature
-      }
+      hour: req.body.hour,
+      minute: req.body.minute,
+      temperature: req.body.temperature,
+      device_id: req.body.device_id
     };
   }
 };
