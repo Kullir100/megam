@@ -25,6 +25,7 @@
     "grunt-contrib-watch": "~0.6.1",
     "request": "~2.55.0",
     "time-grunt": "~1.1.0",
-    "load-grunt-tasks": "~3.1.0"
+    "load-grunt-tasks": "~3.1.0",
+    "foreman": "~1.4.1"
   }
 }
