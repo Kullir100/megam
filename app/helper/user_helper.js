@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  create_user: function(req, res) {
+  createUser: function(req, res) {
     if (req.body.device_id === undefined || req.body.hour === undefined || req.body.minute === undefined || req.body.temperature === undefined) {
       res.sendStatus(400);
       return;
