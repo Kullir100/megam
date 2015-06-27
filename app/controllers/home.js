@@ -3,12 +3,7 @@ user_name = "user";
 
 module.exports = function(app, db) {
   app.post('/', function(req, res) {
-    if (req.body.alarm_time === undefined || req.body.temperature === undefined) {
-      res.sendStatus(500);
-      return;
-    }
-
-    var user_object = user_helper.create_user(req);
+    var user_object = user_helper.create_user(req, res);
     db.save(user_name, user_object, function(err) {
       if (err) {
         console.log(err.message);
