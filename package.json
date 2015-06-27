@@ -20,7 +20,8 @@
     "node-uuid": "~1.4.3",
     "spark": "~0.5.9",
     "bunyan": "~1.4.0",
-    "chalk": "~1.0.0"
+    "chalk": "~1.0.0",
+    "lodash": "~3.9.3"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
