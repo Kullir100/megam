@@ -8,14 +8,14 @@ var config = {
     app: {
       name: 'megam'
     },
-    port: 3000,
+    port: process.env.PORT || 3000,
   },
   production: {
     root: rootPath,
     app: {
       name: 'megam'
     },
-    port: 3000,
+    port: process.env.PORT || 3000,
   }
 };
 
