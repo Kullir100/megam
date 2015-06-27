@@ -21,7 +21,7 @@ module.exports = function(app, db) {
         res.status(404).send('Cannot find user details, please save them first.');
         return;
       }
-      res.status(200).send(obj);
+      res.status(200).send(obj.data);
     });
   });
 };
