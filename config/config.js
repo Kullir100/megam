@@ -9,6 +9,13 @@ var config = {
       name: 'megam'
     },
     port: 3000,
+  },
+  production: {
+    root: rootPath,
+    app: {
+      name: 'megam'
+    },
+    port: 3000,
   }
 };
 
