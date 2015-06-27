@@ -7,6 +7,10 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var compress = require('compression');
 var methodOverride = require('method-override');
+var Store = require("jfs");
+var db = new Store("./user_data_store", {
+  pretty: true
+});
 
 module.exports = function(app, config) {
   app.set('views', config.root + '/app/views');
@@ -29,7 +33,7 @@ module.exports = function(app, config) {
 
   var controllers = glob.sync(config.root + '/app/controllers/*.js');
   controllers.forEach(function (controller) {
-    require(controller)(app);
+    require(controller)(app, db);
   });
 
   app.use(function (req, res, next) {
@@ -37,7 +41,7 @@ module.exports = function(app, config) {
     err.status = 404;
     next(err);
   });
-  
+
   if(app.get('env') === 'development'){
     app.use(function (err, req, res, next) {
       res.status(err.status || 500);

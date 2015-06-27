@@ -3,3 +3,4 @@ public/components
 .sass-cache
 .env
 sample_jsons/
+user_data_store/
