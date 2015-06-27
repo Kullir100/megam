@@ -23,7 +23,8 @@
     "spark": "~0.5.9",
     "bunyan": "~1.4.0",
     "chalk": "~1.0.0",
-    "lodash": "~3.9.3"
+    "lodash": "~3.9.3",
+    "moment": "^2.10.3"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
