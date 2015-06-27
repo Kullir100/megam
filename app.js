@@ -1,6 +1,5 @@
 var express = require('express')
-  , config = require('./config/config')
-  , kulir = require('./lib/kulir');
+  , config = require('./config/config');
 
 var app = express();
 

@@ -11,6 +11,7 @@ var Store = require("jfs");
 var db = new Store("./user_data_store", {
   pretty: true
 });
+var kulir = require('../lib/kulir')(db);
 
 module.exports = function(app, config) {
   app.set('views', config.root + '/app/views');
