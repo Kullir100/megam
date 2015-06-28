@@ -10,7 +10,7 @@ var bodyParser = require('body-parser');
 var compress = require('compression');
 var methodOverride = require('method-override');
 var Store = require("jfs");
-var db = new Store("./user_data_store", {
+var db = new Store("../user_data_store", {
   pretty: true
 });
 var kulir = require('../lib/kulir')(db);
