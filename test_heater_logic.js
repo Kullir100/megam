@@ -18,7 +18,7 @@ var db_values = {
 var shouldTurnOn = heater_logic(db_values, 30, 1);
 
 if (shouldTurnOn === true) {
-  console.log('off');
-} else {
   console.log('on');
+} else {
+  console.log('off');
 }
